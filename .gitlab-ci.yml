@@ -60,7 +60,7 @@ before_script:
 Test SSH:
   script:
   # try to connect to GitLab.com
-  - ssh git@gitlab.com
+  - ssh ec2-user@ec2-18-185-138-72.eu-central-1.compute.amazonaws.com
 
   # try to clone yourself. A *PUBLIC* key paired to the SSH_PRIVATE_KEY was added as deploy key to this repository
-  - git clone git@gitlab.com:gitlab-examples/ssh-private-key.git
+  - touch test.md

@@ -31,7 +31,7 @@ before_script:
   ## with your own domain name. You can copy and repeat that command if you have
   ## more than one server to connect to.
   ##
-  - ssh-keyscan your-server >> ~/.ssh/known_hosts
+  - ssh-keyscan ec2-18-185-138-72.eu-central-1.compute.amazonaws.com >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
 
   ##
@@ -60,7 +60,7 @@ before_script:
 Test SSH:
   script:
   # try to connect to your aws server
-  - scp index.html ec2-user@your-server:/home/ec2-user/www
+  - scp index.html ec2-user@ec2-18-185-138-72.eu-central-1.compute.amazonaws.com:/home/ec2-user/www
 
   # try to clone yourself. A *PUBLIC* key paired to the SSH_PRIVATE_KEY was added as deploy key to this repository
   - touch test.md
